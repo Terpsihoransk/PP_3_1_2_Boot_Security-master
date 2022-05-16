@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Add new user</title>
+</head>
+<body>
+<h2>Add new user</h2>
+</div>
+<form action="#" th:action="@{/new}" th:object="${user}" method="post">
+    <label for="username">Name</label>
+    <input type="text" th:field="*{username}" id="username" placeholder="Name">
+    <label for="password">password</label>
+    <input type="text" th:field="*{password}" id="password" placeholder="password">
+    <p>
+        <label>Roles:
+            <input type="checkbox" name="role"
+                   th:each="role : ${allRoles}"
+                   th:text="${role.name}"
+                   th:value="${role.id}"
+            />
+        </label>
+    </p>
+    <input type="submit" value="Create User">
+</form>
+</body>
+</html>
