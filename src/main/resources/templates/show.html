@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Show info</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Show info</title>
+</head>
+<body>
+<h2 align="center">Profile info:</h2>
+
+<table border="1" align="center">
+    <thead>
+    <tr>
+        <th>Username</th>
+        <th>Password</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td th:text="${user.username}"></td>
+        <td th:text="${user.password}"></td>
+
+    </tr>
+    </tbody>
+</table>
+<h4><a href="/login">Войти</a></h4>
+<h4><a href="/admin">В админку</a></h4>
+<h4><a href="/show">В профиль</a></h4>
+<h4><a href="/logout">Выйти</a></h4>
+</div>
+</body>
+</html>

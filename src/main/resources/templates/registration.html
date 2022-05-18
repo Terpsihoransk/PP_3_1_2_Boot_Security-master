@@ -2,16 +2,18 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Add new user</title>
+    <title>Registration</title>
 </head>
 <body>
-<h2>Add new user</h2>
+<h2>Registration</h2>
 </div>
-<form action="#" th:action="@{/new}" th:object="${user}" method="post">
+<form action="#" th:action="@{/admin/registration}" th:object="${user}" method="post">
     <label for="username">Name</label>
     <input type="text" th:field="*{username}" id="username" placeholder="Name">
     <label for="password">password</label>
     <input type="text" th:field="*{password}" id="password" placeholder="password">
+    <label for="age">age</label>
+    <input type="text" th:field="*{age}" id="age" placeholder="age">
     <p>
         <label>Roles:
             <input type="checkbox" name="role"
